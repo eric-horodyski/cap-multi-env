@@ -1,0 +1,7 @@
+{
+  "name": "cap-multi-env",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "react"
+}
