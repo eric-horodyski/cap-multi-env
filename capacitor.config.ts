@@ -1,10 +1,36 @@
-import { CapacitorConfig } from '@capacitor/cli';
+/// <reference types="@capacitor/splash-screen" />
 
-const config: CapacitorConfig = {
-  appId: 'io.ionic.starter',
-  appName: 'cap-multi-env',
-  webDir: 'build',
-  bundledWebRuntime: false
+import { CapacitorConfig } from "@capacitor/cli";
+
+const devConfig: CapacitorConfig = {
+  appId: "cap.multi.env.dev",
+  appName: "Multi Env",
+  webDir: "build",
+  bundledWebRuntime: false,
+  plugins: {
+    SplashScreen: {
+      launchShowDuration: 3000,
+    },
+  },
+  ios: {
+    scheme: "App",
+  },
 };
 
-export default config;
+const prodConfig: CapacitorConfig = {
+  appId: "cap.multi.env.prod",
+  appName: "Multi Env",
+  webDir: "build",
+  bundledWebRuntime: false,
+  plugins: {
+    SplashScreen: {
+      launchShowDuration: 5000,
+      showSpinner: true,
+    },
+  },
+  ios: {
+    scheme: "App_Prod",
+  },
+};
+
+export default prodConfig;

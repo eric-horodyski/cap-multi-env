@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">Multi Env</string>
+    <string name="title_activity_main">Multi Env</string>
+    <string name="package_name">cap.multi.env.dev</string>
+    <string name="custom_url_scheme">cap.multi.env.dev</string>
+</resources>
