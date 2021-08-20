@@ -15,10 +15,13 @@ const devConfig: CapacitorConfig = {
   ios: {
     scheme: "App",
   },
+  android: {
+    flavor: "dev",
+  },
 };
 
 const prodConfig: CapacitorConfig = {
-  appId: "cap.multi.env.prod",
+  appId: "cap.multi.env",
   appName: "Multi Env",
   webDir: "build",
   bundledWebRuntime: false,
@@ -30,6 +33,9 @@ const prodConfig: CapacitorConfig = {
   },
   ios: {
     scheme: "App_Prod",
+  },
+  android: {
+    flavor: "prod",
   },
 };
 

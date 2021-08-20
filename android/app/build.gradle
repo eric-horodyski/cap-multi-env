@@ -1,6 +1,20 @@
 apply plugin: 'com.android.application'
 
 android {
+    flavorDimensions "environment"
+    productFlavors {
+        prod {
+            dimension "environment"
+            applicationIdSuffix ".prod"
+            manifestPlaceholders = [hostName:"www.prod.example.com"]
+
+        }
+        dev {
+            dimension "environment"
+            manifestPlaceholders = [hostName:"www.dev.example.com"]
+        }
+    }
+
     compileSdkVersion rootProject.ext.compileSdkVersion
     defaultConfig {
         applicationId "cap.multi.env.dev"

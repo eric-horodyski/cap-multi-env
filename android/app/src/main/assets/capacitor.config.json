@@ -1,5 +1,5 @@
 {
-	"appId": "cap.multi.env.prod",
+	"appId": "cap.multi.env",
 	"appName": "Multi Env",
 	"webDir": "build",
 	"bundledWebRuntime": false,
@@ -11,5 +11,8 @@
 	},
 	"ios": {
 		"scheme": "App_Prod"
+	},
+	"android": {
+		"flavor": "prod"
 	}
 }
