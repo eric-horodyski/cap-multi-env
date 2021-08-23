@@ -1,18 +1,17 @@
 {
-	"appId": "cap.multi.env",
+	"appId": "cap.multi.env.dev",
 	"appName": "Multi Env",
 	"webDir": "build",
 	"bundledWebRuntime": false,
 	"plugins": {
 		"SplashScreen": {
-			"launchShowDuration": 5000,
-			"showSpinner": true
+			"launchShowDuration": 3000
 		}
 	},
 	"ios": {
-		"scheme": "App_Prod"
+		"scheme": "App"
 	},
 	"android": {
-		"flavor": "prod"
+		"flavor": "dev"
 	}
 }

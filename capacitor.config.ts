@@ -2,41 +2,48 @@
 
 import { CapacitorConfig } from "@capacitor/cli";
 
-const devConfig: CapacitorConfig = {
-  appId: "cap.multi.env.dev",
-  appName: "Multi Env",
-  webDir: "build",
-  bundledWebRuntime: false,
-  plugins: {
-    SplashScreen: {
-      launchShowDuration: 3000,
-    },
-  },
-  ios: {
-    scheme: "App",
-  },
-  android: {
-    flavor: "dev",
-  },
-};
+let config: CapacitorConfig;
 
-const prodConfig: CapacitorConfig = {
-  appId: "cap.multi.env",
-  appName: "Multi Env",
-  webDir: "build",
-  bundledWebRuntime: false,
-  plugins: {
-    SplashScreen: {
-      launchShowDuration: 5000,
-      showSpinner: true,
-    },
-  },
-  ios: {
-    scheme: "App_Prod",
-  },
-  android: {
-    flavor: "prod",
-  },
-};
+switch (process.env.NODE_ENV) {
+  case "production":
+    config = {
+      appId: "cap.multi.env",
+      appName: "Multi Env",
+      webDir: "build",
+      bundledWebRuntime: false,
+      plugins: {
+        SplashScreen: {
+          launchShowDuration: 5000,
+          showSpinner: true,
+        },
+      },
+      ios: {
+        scheme: "App_Prod",
+      },
+      android: {
+        flavor: "prod",
+      },
+    };
+    break;
+  default:
+    config = {
+      appId: "cap.multi.env.dev",
+      appName: "Multi Env",
+      webDir: "build",
+      bundledWebRuntime: false,
+      plugins: {
+        SplashScreen: {
+          launchShowDuration: 3000,
+        },
+      },
+      ios: {
+        scheme: "App",
+      },
+      android: {
+        flavor: "dev",
+      },
+    };
+    break;
+}
 
-export default prodConfig;
+export default config;
