@@ -6,6 +6,7 @@ let config: CapacitorConfig;
 
 switch (process.env.NODE_ENV) {
   case "production":
+  case "prod":
     config = {
       appId: "cap.multi.env",
       appName: "Multi Env",
