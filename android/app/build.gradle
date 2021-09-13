@@ -6,7 +6,7 @@ android {
         prod {
             dimension "environment"
             applicationIdSuffix ".prod"
-            manifestPlaceholders = [hostName:"www.prod.example.com", appLabel: "Multi Env"]
+            manifestPlaceholders = [hostName:"www.prod.example.com", appLabel: "Multi Env [PROD]"]
 
         }
         dev {
